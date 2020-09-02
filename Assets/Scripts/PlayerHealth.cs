@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float invicibilityTimeAfterHit = 3f;
     public int maxHealth = 100;
     public int currentHealth;
-    public SpriteRenderer graphics;
-    public float invicibilityFlashDelay = 0.15f;
 
+    public float invicibilityTimeAfterHit = 3f;
+    public float invicibilityFlashDelay = 0.2f;
     public bool isInvicible = false;
 
+    public SpriteRenderer graphics;
     public MyHealthBar healthBar;
 
     void Start()
