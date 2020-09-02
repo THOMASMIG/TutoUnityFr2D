@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
     public float speed;
     public Transform[] waypoints;
-    public int damageOnCollision = 10; 
+    public int damageOnCollision; 
     public SpriteRenderer graphics;
     private Transform target;
     private int destPoint = 0;
@@ -34,6 +35,7 @@ public class EnemyPatrol : MonoBehaviour
         {
             PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damageOnCollision);
+            Debug.Log(damageOnCollision);
         }
     }
 }
